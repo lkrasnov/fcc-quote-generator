@@ -7,13 +7,15 @@ $(document).ready(function() {
       dataType: "json",
       success: function(data) {
         var quote = data[0];
-        var quoteContent = quote.content.slice(3, quote.content.length - 6);
+        var quoteContent = quote.content.slice(3, quote.content.length - 5);
         var quoteTitle = quote.title;
 
         $(".quote-content").html(quoteContent);
-        $(".quote-title").html("— " + quoteTitle.toUpperCase()); 
+        $(".quote-title").html("— " + quoteTitle.toUpperCase());
+        $(".quote").removeClass("hide"); 
+        $("#tweet").attr("href", "http://twitter.com/home?status=" + quoteContent + " — " + quoteTitle);
       }
     });
   });
-  
+
 });

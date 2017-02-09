@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>freeCodeCamp - Build a Random Quote Generator</title>
   <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <link href="https://use.fontawesome.com/652649cc8f.css" media="all" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
 
@@ -15,8 +16,13 @@
     </div>
 
     <div class="jumbotron">
-      <h1 class="quote-content display-5"></h1>
-      <p class="quote-title lead"></p>
+      <div class="quote hide">
+        <h1 class="quote-content display-5"></h1>
+        <p class="quote-title lead"></p>
+        <a id="tweet" class="btn btn-block btn-twitter" href="#">
+          <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+        </a>
+      </div>
       <p><button id="getQuote" class="btn btn-lg btn-success" role="button">Get a Quote</button></p>
     </div>
 
